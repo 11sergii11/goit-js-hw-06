@@ -1,4 +1,4 @@
-const counterValue = {
+const countValue = {
     value: 0,
     increment() {
         this.value += 1;
@@ -8,16 +8,16 @@ const counterValue = {
     },
 };
 
-const incrementBtn = document.querySelector('[data-action="increment"]');
-const decrementBtn = document.querySelector('[data-action="decrement"]');
-const valueEl = document.querySelector('#value');
+const incrBtn = document.querySelector('[data-action="increment"]');
+const decrBtn = document.querySelector('[data-action="decrement"]');
+const valueElem = document.querySelector('#value');
 
-decrementBtn.addEventListener('click', function () {
-    counterValue.decrement();
-    valueEl.textContent = counterValue.value;
+decrBtn.addEventListener('click', function () {
+    countValue.decrement();
+    valueElem.textContent = countValue.value;
 });
 
-incrementBtn.addEventListener('click', function () {
-    counterValue.increment();
-    valueEl.textContent = counterValue.value;
+incrBtn.addEventListener('click', function () {
+    countValue.increment();
+    valueElem.textContent = countValue.value;
 })
