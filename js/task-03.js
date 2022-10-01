@@ -13,15 +13,15 @@ const images = [
   },
 ];
 
-const listEl = document.querySelector(".gallery");
-console.log(listEl);
+const listElem = document.querySelector(".gallery");
+console.log(listElem);
 
-const itemEl = images
+const itemElem = images
   .map(
     (image) =>
-      `<li class="list-item"> <img src='${image.url}' alt='${image.alt}' width=240 class="item-img"> </li>`
+      `<li class="list--item"> <img src='${image.url}' alt='${image.alt}' width=240 height=140 class="list--item__img"> </li>`
   )
   .join("");
-console.log(itemEl);
+console.log(itemElem);
 
-listEl.insertAdjacentHTML("afterbegin", itemEl);
+listElem.insertAdjacentHTML("afterbegin", itemElem);
