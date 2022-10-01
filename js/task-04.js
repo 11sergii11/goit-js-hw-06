@@ -7,9 +7,9 @@ const countValue = {
         this.value -= 1;
     },
 };
-
-const incrBtn = document.querySelector('[data-action="increment"]');
 const decrBtn = document.querySelector('[data-action="decrement"]');
+const incrBtn = document.querySelector('[data-action="increment"]');
+
 const valueElem = document.querySelector('#value');
 
 decrBtn.addEventListener('click', function () {
