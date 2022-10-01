@@ -1,13 +1,17 @@
-const navEl = document.querySelector("#categories");
+const navElements = document.querySelector("#categories");
 
-const navItemEl = navEl.children;
-console.log("Number of categories:", navItemEl.length);
+const navItemElements = navElements.children;
+console.log("Number of categories:", navItemElements.length);
 
 const listCategories = document.querySelectorAll(".item");
 
 for (const argList of listCategories) {
-  const titleEl = Object.keys(argList.children);
-  console.log(`Category: ${argList.children[titleEl[0]].textContent}`);
-  const listItem = argList.children[titleEl[1]];
-  console.log(`Elements: ${listItem.children.length}`);
+  
+  const titleElements = Object.keys(argList.children);
+  const catTitle = argList.children[titleElements[0]].textContent;
+  console.log(`Category: ${catTitle}`);
+
+  const listItem = argList.children[titleElements[1]];
+  const listItemlength = listItem.children.length;
+  console.log(`Elements: ${listItemlength}`);
 }
