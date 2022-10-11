@@ -1,4 +1,4 @@
-function getRandomHexColor() {
+function getRandomColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
@@ -7,6 +7,7 @@ const spanChengeColor = document.querySelector(".color");
 const btnChengeColor = document.querySelector(".change-color");
 
 btnChengeColor.addEventListener("click", (event) => {
-  body.style.backgroundColor = getRandomHexColor();
-  spanChengeColor.textContent = getRandomHexColor();
+  body.style.backgroundColor = getRandomColor();
+  spanChengeColor.textContent = getRandomColor();
+  btnChengeColor.style.backgroundColor = getRandomColor();
 });
